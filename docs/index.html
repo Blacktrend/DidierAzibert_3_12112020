@@ -5,31 +5,94 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;800&display=swap" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Réservez le menu qui vous convient | ohmyfood</title>
+    <meta name="description" content="Choisissez, réservez les mets proposés au menu de grands restaurants et gagnez du temps">
     <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 <body>
-<header>
-    <div class="logo">
+<header class="header">
+    <div class="header__logo">
         <a href="https://blacktrend.github.io/DidierAzibert_3_12112020/">
             <img src="images/logo/ohmyfood@2x.svg" alt="Logo de ohmyfood" title="Logo de ohmyfood" />
         </a>
     </div>
 </header>
 <main>
-    <section id="selection">
-        <form id="search-form" method="post" action="#">
-            <i class="fas fa-map-marker-alt"></i><!-- to avoid space
-                --><input type="search" name="search" id="search" placeholder="Paris, Belleville"/><!-- to avoid space
-                --><h1>Réservez le menu qui vous convient</h1>
-                <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-                <button type="submit">Explorez nos restaurants</button>
+    <section class="filter">
+        <form class="filter__form" method="post" action="#">
+            <i class="filter__icon fas fa-map-marker-alt"></i><!-- to avoid space
+                --><input class="filter__input" type="search" name="search" id="search" placeholder="Paris, Belleville"/><!-- to avoid space
+                --><h1 class="filter__title">Réservez le menu qui vous convient</h1>
+                <p class="filter__teaser">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+                <button class="filter__button" type="submit">Explorez nos restaurants</button>
         </form>
     </section>
-    <section class="main-section">
+    <section class="info">
+        <h2 class="info__title">Fonctionnement</h2>
+        <ol class="steps">
+            <li class="step">
+                <i class=" step__icon fas fa-mobile-alt"></i>
+                <p class="step__p">Choisissez un restaurant</p>
+            </li>
+            <li class="step">
+                <i class=" step__icon fas fa-list-ul"></i>
+                <p class="step__p">Composez votre menu</p>
+            </li>
+            <li class="step">
+                <i class="step__icon fas fa-store"></i>
+                <p class="step__p">Dégustez au restaurant</p>
+            </li>
+        </ol>
+    </section>
+    <section class="list">
+        <h2 class="list__title">Restaurants</h2>
+        <ul class="results">
+            <li class="card">
+                <a href="palette.html">
+                    <img class="card__img" src="images/restaurants/la-palette-du-gout.jpg" alt="Restaurant La palette du goût" srcset="images/restaurants/la-palette-du-gout@2x.jpg 2x"/>
+                    <div class="card__badge">Nouveau</div>
+                    <h3 class="card__title">La palette du goût</h3>
+                    <p class="card__place">Ménilmontant</p>
+                    <i class="card__bookmark far fa-heart"></i>
+                </a>
+            </li>
+            <li class="card">
+                <a href="note-enchantee.html">
+                    <img class="card__img" src="images/restaurants/la-note-enchantee.jpg" alt="Restaurant La note enchantée" srcset="images/restaurants/la-note-enchantee@2x.jpg 2x"/>
+                    <div class="card__badge">Nouveau</div>
+                    <h3 class="card__title">La note enchantée</h3>
+                    <p class="card__place">Charonne</p>
+                    <i class="card__bookmark far fa-heart"></i>
+                </a>
+            </li>
+            <li class="card">
+                <a href="francaise.html">
+                    <img class="card__img" src="images/restaurants/a-la-francaise.jpg" alt="Restaurant À la française" srcset="images/restaurants/a-la-francaise@2x.jpg 2x"/>
+                    <h3 class="card__title">À la française</h3>
+                    <p class="card__place">Cité Rouge</p>
+                    <i class="card__bookmark far fa-heart"></i>
+                </a>
+            </li>
+            <li class="card">
+                <a href="delice.html">
+                    <img class="card__img" src="images/restaurants/le-delice-des-sens.jpg" alt="Restaurant Le délice des sens" srcset="images/restaurants/le-delice-des-sens@2x.jpg 2x"/>
+                    <h3 class="card__title">Le délice des sens</h3>
+                    <p class="card__place">Folie-Méricourt</p>
+                    <i class="card__bookmark far fa-heart"></i>
+                </a>
+            </li>
+        </ul>
     </section>
 </main>
-<footer>
-
+<footer class="footer">
+    <div class="footer__logo">
+        <a href="https://blacktrend.github.io/DidierAzibert_3_12112020/">
+            <img src="images/logo/ohmyfood@2x.svg" alt="Logo de ohmyfood" title="Logo de ohmyfood" />
+        </a>
+    </div>
+    <a class="footer__link" href="#"><i class="footer__icon fas fa-utensils"></i>Proposer un restaurant</a>
+    <a class="footer__link" href="#"><i class="footer__icon fas fa-hands-helping"></i>Devenir partenaire</a>
+    <a class="footer__link" href="#">Mentions légales</a>
+    <a class="footer__link" href="mailto:contact@ohmyfood.com?subject=Contact%20site%20ohmyfood" target="_blank" rel="external nofollow noopener noreferrer">Contact</a>
 </footer>
 </body>
 </html>
