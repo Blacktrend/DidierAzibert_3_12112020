@@ -6100,4 +6100,28 @@ readers do not read off random characters that represent icons */
   font-weight: 400;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+main, footer {
+  padding: 20px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
 /*# sourceMappingURL=style.css.map */
