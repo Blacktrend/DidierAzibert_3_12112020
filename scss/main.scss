@@ -1,8 +1,10 @@
 @import "1-Utils/1-variables";
 
 @import "1-Utils/3-mixins";
-
+@import "1-Utils/4-placeholders";
 @import "2-Vendors/fontawesome/fontawesome";
 @import "2-Vendors/fontawesome/solid";
 @import "2-Vendors/fontawesome/regular";
-@import "3-Base/base"
+@import "3-Base/base";
+
+@import "5-Layout/layout";

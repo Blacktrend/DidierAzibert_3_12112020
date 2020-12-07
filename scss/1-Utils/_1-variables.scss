@@ -1,3 +1,5 @@
+$font: 'Raleway', sans-serif;
+
 $colors: (
         first: #9356dc,
         second: #FF79DA,
@@ -8,13 +10,20 @@ $colors: (
 );
 
 $sizes: (
-        desktop: 1440px,
-        test: 768px,
         default-padding: 20px
 );
 
 $breakpoints: (
+        mobile: 375px,
         tablet: 768px,
         laptop: 992px,
         desktop: 1200px,
+        desktop_M: 1440px
 );
+
+$radius: (
+        steps: 20px,
+        menu: 20px,
+        img: 10px,
+        buttons: 50px
+)

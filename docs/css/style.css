@@ -1,4 +1,22 @@
 @charset "UTF-8";
+body, button {
+  font-family: "Raleway", sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+.filter__input, .header__logo {
+  text-align: center;
+}
+
+.filter__place {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /*!
  * Font Awesome Free 5.15.1 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
@@ -6105,12 +6123,11 @@ readers do not read off random characters that represent icons */
 }
 
 body {
-  font-family: "Raleway", sans-serif;
-  max-width: 1440px;
+  max-width: 375px;
   margin: 0 auto;
 }
 
-main, footer {
+footer {
   padding: 20px;
 }
 
@@ -6119,9 +6136,30 @@ a {
   text-decoration: none;
 }
 
-ul {
+ul, ol {
   list-style-type: none;
   padding: 0;
+}
+
+/* header */
+.header {
+  padding: 20px;
+}
+
+.filter__place {
+  box-shadow: inset 0px 5px 5px -5px #898989;
+  padding: 5px;
+}
+
+/* filter */
+.filter__input {
+  padding: 10px;
+  border: none;
+  max-width: 130px;
+}
+
+.filter__place, .filter__input {
+  background-color: #eaeaea;
 }
 
 /*# sourceMappingURL=style.css.map */

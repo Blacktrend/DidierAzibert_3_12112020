@@ -1,0 +1,17 @@
+%font {
+  font-family: $font;
+}
+
+%pointer {
+  cursor: pointer;
+}
+
+%center_text {
+  text-align: center;
+}
+
+%center_flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

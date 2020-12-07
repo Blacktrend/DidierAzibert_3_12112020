@@ -2,18 +2,23 @@
   box-sizing: border-box;
 }
 body {
-  font-family: 'Raleway', sans-serif;
-  max-width: map-get($sizes, desktop);
+  max-width: map-get($breakpoints, mobile);
   margin: 0 auto;
 }
-main, footer {
+body, button {
+  @extend %font;
+}
+button {
+  @extend %pointer;
+}
+footer {
   padding: map-get($sizes, default-padding);
 }
 a {
   color: black;
   text-decoration: none;
 }
-ul {
+ul, ol {
   list-style-type: none;
   padding: 0;
 }
