@@ -1,0 +1,9 @@
+button {
+  border: none;
+  background: map-get($colors, first);
+  background: linear-gradient(176deg, map-get($colors, second) 0%, map-get($colors, first) 70%);
+  color: white;
+  font-weight: bold;
+  padding: map-get($sizes, default-padding);
+  border-radius: map-get($radius, buttons);
+}
