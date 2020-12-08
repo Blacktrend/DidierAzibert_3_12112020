@@ -1,0 +1,73 @@
+.info {
+  @extend %default-padding;
+  &__title {
+    margin-bottom: map-get($sizes, xl);
+  }
+  .steps {
+    counter-reset: step;
+    .step {
+      counter-increment: step;
+      @extend %bg;
+      padding: map-get($sizes, l);
+      border-radius: map-get($radius, steps);
+      margin-bottom: map-get($sizes, l);
+      box-shadow: map-get($shadows, soft);
+      position: relative;
+      z-index: 1;
+      cursor: default;
+      &::before {
+        content: counter(step);
+        display: inline-block;
+        vertical-align: middle;
+        @extend %center-text;
+        width: map-get($sizes, m);
+        height: map-get($sizes, m);
+        font-size: 0.9rem;
+        font-weight: bold;
+        color: white;
+        background-color: map-get($colors, first);
+        border-radius: 50%;
+        position: absolute;
+        left: -8px;
+        top: 23px;
+        padding: 3px;
+        font-family: sans-serif;
+        line-height: 1.2;
+      }
+      &__p {
+        display: inline;
+        font-weight: bold;
+        font-size: 0.9em;
+      }
+      &__icon {
+        margin: 0 map-get($sizes, l);
+        width: 20px;
+        @extend %center-text;
+        color: map-get($colors, shadow);
+        transition: color .2s ease-in-out;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        border-radius: map-get($radius, steps);
+        background: lighten(map-get($colors, first), 35);
+        box-shadow: map-get($shadows, light);
+        z-index: -1;
+        opacity: 0;
+        transition: opacity .2s ease-in-out;
+      }
+      &:hover{
+        &::after {
+          opacity: 1;
+        }
+        .step__icon {
+          color: map-get($colors, first);
+        }
+      }
+    }
+  }
+}

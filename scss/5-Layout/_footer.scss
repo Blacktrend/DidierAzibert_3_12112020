@@ -1,0 +1,16 @@
+.footer {
+  background-color: map-get($colors, footer-bg);
+  &__logo {
+    width: 40%;
+    margin-bottom: map-get($sizes, l);
+  }
+  &__link {
+    color: map-get($colors, lnk);
+    font-size: 0.9em;
+    margin-bottom: map-get($sizes, m);
+  }
+  &__icon {
+    width: 20px;
+    margin-right: map-get($sizes, xs);
+  }
+}

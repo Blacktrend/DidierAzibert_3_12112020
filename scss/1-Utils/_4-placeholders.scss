@@ -1,16 +1,8 @@
-%font {
-  font-family: $font;
-}
-
-%pointer {
-  cursor: pointer;
-}
-
-%center_text {
+%center-text {
   text-align: center;
 }
 
-%center_flex {
+%center-flex {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,4 +10,8 @@
 
 %bg {
   background-color: map-get($colors, bg);
+}
+
+%default-padding {
+  padding: map-get($sizes, l);
 }

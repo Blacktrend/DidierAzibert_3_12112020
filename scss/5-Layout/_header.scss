@@ -1,0 +1,7 @@
+.header {
+  @extend %default-padding;
+  &__logo {
+    @extend %center-text;
+  }
+}
+

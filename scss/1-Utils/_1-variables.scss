@@ -6,11 +6,20 @@ $colors: (
         third: #99e2d0,
         bg: #f6f6f6,
         dark-bg: #eaeaea,
-        footer-bg: #353535
+        footer-bg: #353535,
+        shadow: #898989,
+        cards: white,
+        lnk: white
 );
 
 $sizes: (
-        default-padding: 20px
+        xs: 8px,
+        s: 12px,
+        m: 16px,
+        l: 24px,
+        xl: 32px,
+        xxl: 40px,
+        imgh: 174px
 );
 
 $breakpoints: (
@@ -22,8 +31,15 @@ $breakpoints: (
 );
 
 $radius: (
-        steps: 20px,
+        steps: 25px,
         menu: 20px,
         img: 10px,
-        buttons: 50px
-)
+        buttons: 50px,
+        badges: 3px
+);
+
+$shadows: (
+        soft: 0 3px 6px rgba(map-get($colors, shadow), .2),
+        light: 0 3px 6px rgba(map-get($colors, shadow), .5),
+        hover: 0 3px 6px rgba(map-get($colors, shadow), .9)
+);

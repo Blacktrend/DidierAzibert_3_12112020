@@ -1,0 +1,38 @@
+.button {
+  position: relative;
+  border: none;
+  border-radius: map-get($radius, buttons);
+  background: map-get($colors, first);
+  background: linear-gradient(176deg, map-get($colors, second) 0%, map-get($colors, first) 85%);
+  z-index: 1;
+  color: white;
+  font-weight: bold;
+  margin: map-get($sizes, l) 0;
+  box-shadow: map-get($shadows, light);
+  &--small {
+    padding: map-get($sizes, m) map-get($sizes, l);
+  }
+  &--large {
+    padding: map-get($sizes, l) map-get($sizes, xl);
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: map-get($radius, buttons);
+    background: lighten(map-get($colors, first), 3);
+    background: linear-gradient(176deg, lighten(map-get($colors, second), 3) 0%, lighten(map-get($colors, first), 3) 85%);
+    box-shadow: map-get($shadows, hover);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity .2s ease-in-out;
+  }
+  &:hover{
+    &::after {
+      opacity: 1;
+    }
+  }
+}

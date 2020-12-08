@@ -1,0 +1,27 @@
+.filter {
+  @extend %center-text;
+  @extend %bg;
+  padding-bottom: map-get($sizes, xxl);
+  &__input {
+    padding: map-get($sizes, xs);
+    border: none;
+    max-width: 130px;
+    &::placeholder {
+      color: black;
+      font-weight: bold;
+    }
+  }
+  &__place, &__input {
+    background-color: map-get($colors, dark-bg);
+  }
+  &__place {
+    @extend %center-flex;
+    align-items: baseline;
+    box-shadow: inset 0 5px 5px -5px map-get($colors, shadow);
+    padding: map-get($sizes, s);
+  }
+  &__title {
+    margin-top: map-get($sizes, xl);
+    padding: 0 map-get($sizes, xxl);
+  }
+}
