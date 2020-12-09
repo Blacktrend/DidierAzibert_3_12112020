@@ -22,6 +22,10 @@
   }
   &__title {
     margin-top: map-get($sizes, xl);
+    padding: 0 45px;
+    @extend %heading-weight;
+  }
+  &__teaser {
     padding: 0 map-get($sizes, xxl);
   }
 }

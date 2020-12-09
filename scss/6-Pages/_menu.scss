@@ -1,0 +1,30 @@
+.menu {
+  &__img {
+    width: 100%;
+    height: map-get($sizes, imgh2);
+  }
+  &__container {
+    @extend %bg;
+    border-radius: map-get($radius, menu) map-get($radius, menu) 0 0;
+    padding: map-get($sizes, ml) map-get($sizes, s);
+    margin-top: -55px;
+    position: relative;
+    z-index: 1;
+  }
+  &__heading {
+    padding-left: map-get($sizes, xs);
+    font-family: 'Shrikhand', cursive;
+    font-size: 1.7em;
+  }
+}
+.meals {
+  &__heading {
+    padding-left: map-get($sizes, xs);
+    font-weight: 400;
+  }
+}
+.meal {
+  &__title {
+    @extend %heading-weight;
+  }
+}

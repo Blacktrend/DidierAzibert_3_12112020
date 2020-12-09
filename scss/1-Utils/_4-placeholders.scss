@@ -13,5 +13,9 @@
 }
 
 %default-padding {
-  padding: map-get($sizes, l);
+  padding: map-get($sizes, ml);
+}
+
+%heading-weight {
+  font-weight: 800;
 }

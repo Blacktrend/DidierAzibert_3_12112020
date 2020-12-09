@@ -2,6 +2,7 @@
   @extend %default-padding;
   &__title {
     margin-bottom: map-get($sizes, xl);
+    @extend %heading-weight;
   }
   .steps {
     counter-reset: step;

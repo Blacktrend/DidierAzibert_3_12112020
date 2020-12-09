@@ -1,4 +1,4 @@
-$font: 'Raleway', sans-serif;
+$font: 'Roboto', sans-serif;
 
 $colors: (
         first: #9356dc,
@@ -16,10 +16,12 @@ $sizes: (
         xs: 8px,
         s: 12px,
         m: 16px,
+        ml: 20px,
         l: 24px,
         xl: 32px,
         xxl: 40px,
-        imgh: 174px
+        imgh: 174px,
+        imgh2: 258px
 );
 
 $breakpoints: (
@@ -31,11 +33,11 @@ $breakpoints: (
 );
 
 $radius: (
-        steps: 25px,
-        menu: 20px,
+        steps: 20px,
+        menu: 45px,
         img: 10px,
         buttons: 50px,
-        badges: 3px
+        badges: 2px
 );
 
 $shadows: (

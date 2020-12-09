@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.info .steps .step__icon, .info .steps .step::before, .filter, .header__logo {
+.info .steps .step__icon, .info .steps .step::before, .filter, .header {
   text-align: center;
 }
 
@@ -9,12 +9,16 @@
   align-items: center;
 }
 
-.list, .info .steps .step, .filter {
+.menu__container, .list, .info .steps .step, .filter {
   background-color: #f6f6f6;
 }
 
 .list, .info, .header, footer {
-  padding: 24px;
+  padding: 20px;
+}
+
+.meal__title, .list__title, .info__title, .filter__title {
+  font-weight: 800;
 }
 
 /*!
@@ -6128,7 +6132,7 @@ body {
 }
 
 body, button {
-  font-family: "Raleway", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 button {
@@ -6186,6 +6190,40 @@ ul, ol {
   opacity: 1;
 }
 
+.header {
+  position: relative;
+}
+.header__logolnk {
+  display: inline-block;
+  width: 49%;
+}
+.header__logoimg {
+  width: 100%;
+}
+.header__backhome {
+  display: inline;
+  position: absolute;
+  left: 20px;
+  top: 24px;
+}
+
+.footer {
+  background-color: #353535;
+}
+.footer__logo {
+  width: 40%;
+  margin-bottom: 24px;
+}
+.footer__link {
+  color: white;
+  font-size: 0.9em;
+  margin-bottom: 16px;
+}
+.footer__icon {
+  width: 20px;
+  margin-right: 8px;
+}
+
 .filter {
   padding-bottom: 40px;
 }
@@ -6208,6 +6246,9 @@ ul, ol {
 }
 .filter__title {
   margin-top: 32px;
+  padding: 0 45px;
+}
+.filter__teaser {
   padding: 0 40px;
 }
 
@@ -6220,7 +6261,7 @@ ul, ol {
 .info .steps .step {
   counter-increment: step;
   padding: 24px;
-  border-radius: 25px;
+  border-radius: 20px;
   margin-bottom: 24px;
   box-shadow: 0 3px 6px rgba(137, 137, 137, 0.2);
   position: relative;
@@ -6263,7 +6304,7 @@ ul, ol {
   bottom: 0;
   left: 0;
   right: 0;
-  border-radius: 25px;
+  border-radius: 20px;
   background: #f2eafb;
   box-shadow: 0 3px 6px rgba(137, 137, 137, 0.5);
   z-index: -1;
@@ -6280,10 +6321,10 @@ ul, ol {
 .list {
   padding-bottom: 40px;
 }
-
 .card {
   background-color: white;
   border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(137, 137, 137, 0.2);
   margin-bottom: 24px;
   padding-bottom: 16px;
   position: relative;
@@ -6297,13 +6338,13 @@ ul, ol {
 .card__badge {
   position: absolute;
   right: 12px;
-  top: 24px;
+  top: 10px;
   background-color: #99e2d0;
   color: #1b6150;
   padding: 8px 12px;
   font-weight: bold;
   font-size: 0.8em;
-  border-radius: 3px;
+  border-radius: 2px;
 }
 .card__title, .card__place {
   padding-left: 12px;
@@ -6317,21 +6358,26 @@ ul, ol {
   font-size: 1.3em;
 }
 
-.footer {
-  background-color: #353535;
+.menu__img {
+  width: 100%;
+  height: 258px;
 }
-.footer__logo {
-  width: 40%;
-  margin-bottom: 24px;
+.menu__container {
+  border-radius: 45px 45px 0 0;
+  padding: 20px 12px;
+  margin-top: -55px;
+  position: relative;
+  z-index: 1;
 }
-.footer__link {
-  color: white;
-  font-size: 0.9em;
-  margin-bottom: 16px;
+.menu__heading {
+  padding-left: 8px;
+  font-family: "Shrikhand", cursive;
+  font-size: 1.7em;
 }
-.footer__icon {
-  width: 20px;
-  margin-right: 8px;
+
+.meals__heading {
+  padding-left: 8px;
+  font-weight: 400;
 }
 
 /*# sourceMappingURL=style.css.map */
