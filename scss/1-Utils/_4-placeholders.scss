@@ -19,3 +19,13 @@
 %heading-weight {
   font-weight: 800;
 }
+
+%first-letter {
+  text-transform: capitalize;
+}
+
+%text-overflow {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

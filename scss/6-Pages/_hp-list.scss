@@ -11,7 +11,6 @@
   border-radius: map-get($radius, img);
   box-shadow: map-get($shadows, soft);
   margin-bottom: map-get($sizes, l);
-  padding-bottom: map-get($sizes, m);
   position: relative;
   &__img {
     object-fit: cover;
@@ -34,7 +33,12 @@
     padding-left: map-get($sizes, s);
     margin-bottom: 0;
     margin-top: map-get($sizes, s);
-
+    &::first-letter {
+      @extend %first-letter;
+    }
+  }
+  &__place {
+    padding-bottom: map-get($sizes, m);
   }
   &__bookmark {
     position: absolute;

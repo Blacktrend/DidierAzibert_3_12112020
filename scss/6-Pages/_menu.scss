@@ -15,16 +15,66 @@
     padding-left: map-get($sizes, xs);
     font-family: 'Shrikhand', cursive;
     font-size: 1.7em;
+    &::first-letter {
+      @extend %first-letter;
+    }
+  }
+  &__bookmark {
+    position: absolute;
+    top: 50px;
+    right: 38px;
+    font-size: 1.5em;
   }
 }
 .meals {
   &__heading {
     padding-left: map-get($sizes, xs);
+    font-size: 0.95em;
     font-weight: 400;
+    text-transform: uppercase;
   }
 }
 .meal {
+  padding-left: map-get($sizes, s);
+  background-color: map-get($colors, cards);
+  border-radius: map-get($radius, steps);
+  box-shadow: map-get($shadows, soft);
+  margin-bottom: map-get($sizes, m);
+  display: flex;
+  justify-content: space-between;
+  &__container {
+    padding: 16px 0;
+    overflow: hidden;
+  }
   &__title {
     @extend %heading-weight;
+    @extend %text-overflow;
+    padding-bottom: 12px;
+    margin: 0;
+    &::first-letter {
+      @extend %first-letter;
+    }
+  }
+  &__desc {
+    margin: 0;
+    font-size: 0.95em;
+    @extend %text-overflow;
+    &::first-letter {
+      @extend %first-letter;
+    }
+  }
+  &__price {
+    margin: 0;
+    padding: 16px 22px 16px 10px;
+    display: flex;
+    align-items: flex-end;
+    font-weight: bold;
+  }
+  &__select {
+    color: white;
+    background-color: map-get($colors, third);
+    border-radius: 0 map-get($radius, steps) map-get($radius, steps) 0;
+    min-width: 59px;
+    @extend %center-flex;
   }
 }
