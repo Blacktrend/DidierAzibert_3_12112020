@@ -13,7 +13,11 @@
     padding: map-get($sizes, m) map-get($sizes, l);
   }
   &--large {
-    padding: map-get($sizes, l) map-get($sizes, xl);
+    padding: map-get($sizes, m) 0;
+    display: block;
+    margin: 50px auto;
+    width: 186px;
+    font-size: 1em;
   }
   &::after {
     content: "";

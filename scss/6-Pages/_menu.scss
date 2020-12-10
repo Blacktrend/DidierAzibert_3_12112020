@@ -32,6 +32,15 @@
     font-size: 0.95em;
     font-weight: 400;
     text-transform: uppercase;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -6px;
+      left: map-get($sizes, xs);
+      width: 40px;
+      border-bottom: 3px solid map-get($colors, third);
+    }
   }
 }
 .meal {
@@ -42,13 +51,17 @@
   margin-bottom: map-get($sizes, m);
   display: flex;
   justify-content: space-between;
+  overflow: hidden;
   &__container {
     padding: 16px 0;
     overflow: hidden;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
   }
   &__title {
+    font-size: 1.1em;
     @extend %heading-weight;
-    @extend %text-overflow;
     padding-bottom: 12px;
     margin: 0;
     &::first-letter {
@@ -58,23 +71,44 @@
   &__desc {
     margin: 0;
     font-size: 0.95em;
-    @extend %text-overflow;
     &::first-letter {
       @extend %first-letter;
     }
   }
   &__price {
     margin: 0;
-    padding: 16px 22px 16px 10px;
-    display: flex;
-    align-items: flex-end;
+    padding: 0 22px 0 10px;
+    align-self: flex-end;
     font-weight: bold;
   }
   &__select {
     color: white;
     background-color: map-get($colors, third);
     border-radius: 0 map-get($radius, steps) map-get($radius, steps) 0;
-    min-width: 59px;
+    position: relative;
+    min-width: 0;
+    max-width: 0;
+    overflow: hidden;
     @extend %center-flex;
+    font-size: 1.3em;
+    transition: all .3s ease-in-out;
+    i {
+      transition: all .4s ease-in-out;
+    }
+  }
+  &:hover {
+    .meal__text {
+      overflow: hidden;
+    }
+    .meal__desc, .meal__title {
+      @extend %text-overflow;
+    }
+    .meal__select {
+      min-width: 59px;
+      max-width: 59px;
+      i {
+        transform: rotate(360deg);
+      }
+    }
   }
 }

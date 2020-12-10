@@ -25,7 +25,7 @@
   text-transform: capitalize;
 }
 
-.meal__desc, .meal__title {
+.meal:hover .meal__desc, .meal:hover .meal__title {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -6179,7 +6179,11 @@ ul, ol {
   padding: 16px 24px;
 }
 .button--large {
-  padding: 24px 32px;
+  padding: 16px 0;
+  display: block;
+  margin: 50px auto;
+  width: 186px;
+  font-size: 1em;
 }
 .button::after {
   content: "";
@@ -6398,6 +6402,15 @@ ul, ol {
   font-size: 0.95em;
   font-weight: 400;
   text-transform: uppercase;
+  position: relative;
+}
+.meals__heading::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 8px;
+  width: 40px;
+  border-bottom: 3px solid #99e2d0;
 }
 
 .meal {
@@ -6408,12 +6421,17 @@ ul, ol {
   margin-bottom: 16px;
   display: flex;
   justify-content: space-between;
+  overflow: hidden;
 }
 .meal__container {
   padding: 16px 0;
   overflow: hidden;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 .meal__title {
+  font-size: 1.1em;
   padding-bottom: 12px;
   margin: 0;
 }
@@ -6423,16 +6441,33 @@ ul, ol {
 }
 .meal__price {
   margin: 0;
-  padding: 16px 22px 16px 10px;
-  display: flex;
-  align-items: flex-end;
+  padding: 0 22px 0 10px;
+  align-self: flex-end;
   font-weight: bold;
 }
 .meal__select {
   color: white;
   background-color: #99e2d0;
   border-radius: 0 20px 20px 0;
+  position: relative;
+  min-width: 0;
+  max-width: 0;
+  overflow: hidden;
+  font-size: 1.3em;
+  transition: all 0.3s ease-in-out;
+}
+.meal__select i {
+  transition: all 0.4s ease-in-out;
+}
+.meal:hover .meal__text {
+  overflow: hidden;
+}
+.meal:hover .meal__select {
   min-width: 59px;
+  max-width: 59px;
+}
+.meal:hover .meal__select i {
+  transform: rotate(360deg);
 }
 
 /*# sourceMappingURL=style.css.map */
