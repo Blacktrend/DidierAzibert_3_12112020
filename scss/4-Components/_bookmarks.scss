@@ -1,29 +1,81 @@
-.bookmark {
-  position: absolute;
-  background: linear-gradient(190deg, map-get($colors, first) 0%, map-get($colors, second) 95%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  cursor: pointer;
-  &.fas {
-    transform: translateY(17px);
-    z-index: -1;
-    transition: all .3s ease-in-out;
+/*.bookmark {
+  &--card, &--menu {
+    position: absolute;
   }
   &--card {
     right: 24px;
     top: 198px;
     font-size: 1.3em;
-    z-index: 2;
   }
   &--menu {
     right: 38px;
     top: 50px;
     font-size: 1.5em;
   }
+  .far, .fas {
+    transition: all .5s ease-in-out;
+  }
+  .fas {
+    height: 0;
+    @extend %text-gradient;
+  }
   &:hover {
-    &.fas {
-      transform: translateY(0);
-      z-index: 1;
+    .bookmark--card {
+      &.fas {
+        height: 20px;
+      }
+    }
+    .bookmark--menu {
+      &.fas {
+        height: 24px;
+      }
+    }
+    .far {
+      opacity: 0;
+    }
+  }
+};*/
+
+.bookmark {
+  &::before { /*prévoir mixin pour les 2 blocs before et after*/
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: $svg-heart;
+    background-repeat: no-repeat;
+  }
+  &--card, &--menu {
+    position: absolute;
+  }
+  &--card { /*prévoir mixin pour ces 2 blocs avec paramètres*/
+    right: 24px;
+    top: 198px;
+    width: 20px;
+    height: 20px;
+  }
+  &--menu {
+    right: 38px;
+    top: 50px;
+    width: 24px;
+    height: 24px;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: $svg-heart-filled;
+    background-repeat: no-repeat;
+    transition: all .5s ease-in-out;
+  }
+  &:hover {
+    &::after {
+      top: 0;
     }
   }
 }
