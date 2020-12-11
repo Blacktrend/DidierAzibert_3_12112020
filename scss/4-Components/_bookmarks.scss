@@ -1,0 +1,29 @@
+.bookmark {
+  position: absolute;
+  background: linear-gradient(190deg, map-get($colors, first) 0%, map-get($colors, second) 95%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+  &.fas {
+    transform: translateY(17px);
+    z-index: -1;
+    transition: all .3s ease-in-out;
+  }
+  &--card {
+    right: 24px;
+    top: 198px;
+    font-size: 1.3em;
+    z-index: 2;
+  }
+  &--menu {
+    right: 38px;
+    top: 50px;
+    font-size: 1.5em;
+  }
+  &:hover {
+    &.fas {
+      transform: translateY(0);
+      z-index: 1;
+    }
+  }
+}

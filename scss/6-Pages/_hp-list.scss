@@ -40,10 +40,4 @@
   &__place {
     padding-bottom: map-get($sizes, m);
   }
-  &__bookmark {
-    position: absolute;
-    right: 24px;
-    top: 198px;
-    font-size: 1.3em;
-  }
 }

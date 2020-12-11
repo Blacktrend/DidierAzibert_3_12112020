@@ -19,12 +19,6 @@
       @extend %first-letter;
     }
   }
-  &__bookmark {
-    position: absolute;
-    top: 50px;
-    right: 38px;
-    font-size: 1.5em;
-  }
 }
 .meals {
   &__heading {
@@ -70,7 +64,7 @@
   }
   &__desc {
     margin: 0;
-    font-size: 0.95em;
+    font-size: 0.9em;
     &::first-letter {
       @extend %first-letter;
     }

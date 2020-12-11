@@ -6204,6 +6204,34 @@ ul, ol {
   opacity: 1;
 }
 
+.bookmark {
+  position: absolute;
+  background: linear-gradient(190deg, #9356dc 0%, #ff79da 95%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+}
+.bookmark.fas {
+  transform: translateY(17px);
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
+}
+.bookmark--card {
+  right: 24px;
+  top: 198px;
+  font-size: 1.3em;
+  z-index: 2;
+}
+.bookmark--menu {
+  right: 38px;
+  top: 50px;
+  font-size: 1.5em;
+}
+.bookmark:hover.fas {
+  transform: translateY(0);
+  z-index: 1;
+}
+
 .header {
   position: relative;
 }
@@ -6367,12 +6395,6 @@ ul, ol {
 .card__place {
   padding-bottom: 16px;
 }
-.card__bookmark {
-  position: absolute;
-  right: 24px;
-  top: 198px;
-  font-size: 1.3em;
-}
 
 .menu__img {
   width: 100%;
@@ -6390,13 +6412,6 @@ ul, ol {
   font-family: "Shrikhand", cursive;
   font-size: 1.7em;
 }
-.menu__bookmark {
-  position: absolute;
-  top: 50px;
-  right: 38px;
-  font-size: 1.5em;
-}
-
 .meals__heading {
   padding-left: 8px;
   font-size: 0.95em;
@@ -6437,7 +6452,7 @@ ul, ol {
 }
 .meal__desc {
   margin: 0;
-  font-size: 0.95em;
+  font-size: 0.9em;
 }
 .meal__price {
   margin: 0;
