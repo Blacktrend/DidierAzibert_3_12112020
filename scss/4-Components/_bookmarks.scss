@@ -1,81 +1,67 @@
-/*.bookmark {
-  &--card, &--menu {
+.bookmark {
+  position: absolute;
+  &--empty {
+    fill: white;
+    stroke: black;
+    stroke-width: 1px;
+  }
+  &--filled {
     position: absolute;
-  }
-  &--card {
-    right: 24px;
-    top: 198px;
-    font-size: 1.3em;
-  }
-  &--menu {
-    right: 38px;
-    top: 50px;
-    font-size: 1.5em;
-  }
-  .far, .fas {
+    height: 0;
+    bottom: 1px;
+    fill: url(#heart-gradient);
+    stroke: url(#heart-gradient);
+    stroke-width: 2px;
     transition: all .5s ease-in-out;
   }
-  .fas {
-    height: 0;
-    @extend %text-gradient;
+  &--stop1 {
+    stop-color: map-get($colors, first);
+  }
+  &--stop2 {
+    stop-color: map-get($colors, second);
   }
   &:hover {
-    .bookmark--card {
-      &.fas {
-        height: 20px;
-      }
-    }
-    .bookmark--menu {
-      &.fas {
-        height: 24px;
-      }
-    }
-    .far {
-      opacity: 0;
+    .bookmark--filled {
+      left: 0;
+      bottom: 0;
     }
   }
-};*/
-
-.bookmark {
-  &::before { /*prévoir mixin pour les 2 blocs before et after*/
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-image: $svg-heart;
-    background-repeat: no-repeat;
-  }
-  &--card, &--menu {
-    position: absolute;
-  }
-  &--card { /*prévoir mixin pour ces 2 blocs avec paramètres*/
+}
+.card {
+  .bookmark {
     right: 24px;
     top: 198px;
     width: 20px;
     height: 20px;
+    &--empty {
+      height: 20px;
+    }
+    &--filled {
+      left: 10px;
+    }
+    &:hover {
+      .bookmark--filled {
+        height: 20px;
+      }
+    }
   }
-  &--menu {
+}
+.menu__container {
+  .bookmark {
     right: 38px;
     top: 50px;
     width: 24px;
     height: 24px;
-  }
-  &::after {
-    content: "";
-    position: absolute;
-    top: 20px;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-image: $svg-heart-filled;
-    background-repeat: no-repeat;
-    transition: all .5s ease-in-out;
-  }
-  &:hover {
-    &::after {
-      top: 0;
+    &--empty {
+      height: 24px;
+    }
+    &--filled {
+      left: 12px;
+    }
+    &:hover {
+      .bookmark--filled {
+        height: 24px;
+      }
     }
   }
 }

@@ -6204,83 +6204,64 @@ ul, ol {
   opacity: 1;
 }
 
-/*.bookmark {
-  &--card, &--menu {
-    position: absolute;
-  }
-  &--card {
-    right: 24px;
-    top: 198px;
-    font-size: 1.3em;
-  }
-  &--menu {
-    right: 38px;
-    top: 50px;
-    font-size: 1.5em;
-  }
-  .far, .fas {
-    transition: all .5s ease-in-out;
-  }
-  .fas {
-    height: 0;
-    @extend %text-gradient;
-  }
-  &:hover {
-    .bookmark--card {
-      &.fas {
-        height: 20px;
-      }
-    }
-    .bookmark--menu {
-      &.fas {
-        height: 24px;
-      }
-    }
-    .far {
-      opacity: 0;
-    }
-  }
-};*/
-.bookmark::before {
-  /*prévoir mixin pour les 2 blocs before et after*/
-  content: "";
+.bookmark {
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
+}
+.bookmark--empty {
+  fill: white;
+  stroke: black;
+  stroke-width: 1px;
+}
+.bookmark--filled {
+  position: absolute;
+  height: 0;
+  bottom: 1px;
+  fill: url(#heart-gradient);
+  stroke: url(#heart-gradient);
+  stroke-width: 2px;
+  transition: all 0.5s ease-in-out;
+}
+.bookmark--stop1 {
+  stop-color: #9356dc;
+}
+.bookmark--stop2 {
+  stop-color: #ff79da;
+}
+.bookmark:hover .bookmark--filled {
   left: 0;
-  background-image: url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='%23000' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' d='M8 2.748l-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z' clip-rule='evenodd'/></svg>");
-  background-repeat: no-repeat;
+  bottom: 0;
 }
-.bookmark--card, .bookmark--menu {
-  position: absolute;
-}
-.bookmark--card {
-  /*prévoir mixin pour ces 2 blocs avec paramètres*/
+
+.card .bookmark {
   right: 24px;
   top: 198px;
   width: 20px;
   height: 20px;
 }
-.bookmark--menu {
+.card .bookmark--empty {
+  height: 20px;
+}
+.card .bookmark--filled {
+  left: 10px;
+}
+.card .bookmark:hover .bookmark--filled {
+  height: 20px;
+}
+
+.menu__container .bookmark {
   right: 38px;
   top: 50px;
   width: 24px;
   height: 24px;
 }
-.bookmark::after {
-  content: "";
-  position: absolute;
-  top: 20px;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-image: url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='%23000' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' d='M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z' clip-rule='evenodd'/></svg>");
-  background-repeat: no-repeat;
-  transition: all 0.5s ease-in-out;
+.menu__container .bookmark--empty {
+  height: 24px;
 }
-.bookmark:hover::after {
-  top: 0;
+.menu__container .bookmark--filled {
+  left: 12px;
+}
+.menu__container .bookmark:hover .bookmark--filled {
+  height: 24px;
 }
 
 .header {
