@@ -6215,7 +6215,7 @@ ul, ol {
 .bookmark--filled {
   position: absolute;
   height: 0;
-  bottom: 1px;
+  bottom: 2px;
   fill: url(#heart-gradient);
   stroke: url(#heart-gradient);
   stroke-width: 2px;
