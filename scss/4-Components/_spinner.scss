@@ -1,0 +1,52 @@
+@keyframes text-rotation {
+  0%  { bottom: 0px; }
+  33% { bottom: 50px; }
+  66% { bottom: 100px; }
+  /*60% { bottom: 150px; }
+  80% { bottom: 200px; }*/
+  100% { bottom: 0px; }
+}
+.spinner {
+  position: absolute;
+  z-index: 9;
+  top: 0;
+  left: 0;
+  font-family: $font;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  font-size: 2rem;
+  @extend %center-flex;
+  flex-direction: column;
+  padding-bottom: 25vh;
+  p {
+    display: block;
+    margin: 0;
+    max-width: map-get($breakpoints, mobile);
+    text-align: center;
+    padding: 6px;
+  }
+  >p {
+    color: white;
+    margin-bottom: 30px;
+  }
+  &__text {
+    height: 50px;
+    overflow: hidden;
+    p {
+      font-weight: bold;
+      white-space: nowrap;
+      position: relative;
+      animation: text-rotation 4s 2s infinite;
+      &:nth-child(1) {
+        color: map-get($colors, first);
+      }
+      &:nth-child(2) {
+        color: map-get($colors, second);
+      }
+      &:nth-child(3) {
+        color: map-get($colors, third);
+      }
+    }
+  }
+}

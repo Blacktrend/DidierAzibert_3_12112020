@@ -7,7 +7,7 @@
     clip-path: initial;
   }
 }
-/* hide empty heart stroke after fill anim */
+/* hide empty heart stroke after heart fill anim */
 @keyframes empty-heart {
   100% {
     opacity: 0;
@@ -24,9 +24,7 @@
     opacity: 0;
     transform: scale(0);
     transform-origin: center bottom;
-    background: linear-gradient(190deg, map-get($colors, first) 0%, map-get($colors, second) 95%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    @extend %text-gradient;
     clip-path: circle(85% at 50% 100%);
     transition: transform .6s linear, opacity .6s linear;
   }
