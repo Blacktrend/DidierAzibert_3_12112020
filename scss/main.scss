@@ -1,6 +1,6 @@
 @import "1-Utils/1-variables";
 
-@import "1-Utils/3-mixins";
+
 @import "1-Utils/4-placeholders";
 @import "2-Vendors/fontawesome/fontawesome";
 @import "2-Vendors/fontawesome/solid";
@@ -9,6 +9,7 @@
 @import "4-Components/buttons";
 @import "4-Components/bookmarks";
 @import "4-Components/spinner";
+@import "4-Components/menu-anim";
 @import "5-Layout/header";
 @import "5-Layout/footer";
 @import "6-Pages/hp-filter";

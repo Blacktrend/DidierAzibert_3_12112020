@@ -90,6 +90,9 @@
       transition: all .4s ease-in-out;
     }
   }
+  &__title, &__desc {
+
+  }
   &:hover {
     .meal__text {
       overflow: hidden;

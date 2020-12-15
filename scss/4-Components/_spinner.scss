@@ -1,20 +1,36 @@
+/* inspired by Codepen JacobStone420/pen/dyEvl */
+
 @keyframes text-rotation {
   0%  { bottom: 0px; }
   33% { bottom: 50px; }
   66% { bottom: 100px; }
-  /*60% { bottom: 150px; }
-  80% { bottom: 200px; }*/
   100% { bottom: 0px; }
 }
+@keyframes loading-spinner {
+  0%  {
+    visibility: visible;
+    z-index: 9;
+  }
+  88% {
+    opacity: 1;
+  }
+  100% {
+    visibility: visible;
+    z-index: 9;
+    opacity: 0.3;
+  }
+}
 .spinner {
-  position: absolute;
-  z-index: 9;
+  animation: loading-spinner 4s;
+  position: fixed;
+  visibility: hidden;
+  z-index: -9;
   top: 0;
   left: 0;
   font-family: $font;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(map-get($colors, footer-bg), 0.9);
   font-size: 2rem;
   @extend %center-flex;
   flex-direction: column;
@@ -37,7 +53,7 @@
       font-weight: bold;
       white-space: nowrap;
       position: relative;
-      animation: text-rotation 4s 2s infinite;
+      animation: text-rotation 3s 1s;
       &:nth-child(1) {
         color: map-get($colors, first);
       }

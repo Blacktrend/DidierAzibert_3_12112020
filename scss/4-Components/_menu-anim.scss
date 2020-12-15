@@ -1,0 +1,87 @@
+@keyframes menu-anim {
+  50% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes h2-anim {
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.menu__heading {
+  opacity: 0;
+  animation: menu-anim .3s .3s ease-in-out forwards;
+}
+.meal {
+  opacity: 0;
+  transform: translateY(12px);
+}
+.meals__heading {
+  transform: translate(-95px);
+  opacity: 0;
+}
+.starters {
+  .meals__heading {
+    animation: h2-anim .5s ease-in-out forwards;
+  }
+  .meal {
+    &:nth-child(1) {
+      animation: menu-anim .6s .3s linear forwards;
+    }
+    &:nth-child(2) {
+      animation: menu-anim .6s .6s linear forwards;
+    }
+    &:nth-child(3) {
+      animation: menu-anim .6s .9s linear forwards;
+    }
+    &:nth-child(4) {
+      animation: menu-anim .6s 1.2s linear forwards;
+    }
+  }
+}
+.dishes {
+  .meals__heading {
+    animation: h2-anim .5s 1.2s ease-in-out forwards;
+  }
+  .meal {
+    &:nth-child(1) {
+      animation: menu-anim .6s 1.8s linear forwards;
+    }
+    &:nth-child(2) {
+      animation: menu-anim .6s 2.1s linear forwards;
+    }
+    &:nth-child(3) {
+      animation: menu-anim .6s 2.4s linear forwards;
+    }
+    &:nth-child(4) {
+      animation: menu-anim .6s 2.7s linear forwards;
+    }
+  }
+}
+.desserts {
+  .meals__heading {
+    animation: h2-anim .5s 2.7s ease-in-out forwards;
+  }
+  .meal {
+    &:nth-child(1) {
+      animation: menu-anim .6s 3.3s linear forwards;
+    }
+    &:nth-child(2) {
+      animation: menu-anim .6s 3.6s linear forwards;
+    }
+    &:nth-child(3) {
+      animation: menu-anim .6s 3.9s linear forwards;
+    }
+    &:nth-child(4) {
+      animation: menu-anim .6s 4.2s linear forwards;
+    }
+  }
+}
