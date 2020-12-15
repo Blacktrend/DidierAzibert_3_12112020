@@ -6266,7 +6266,7 @@ ul, ol {
 /* inspired by Codepen JacobStone420/pen/dyEvl */
 @keyframes text-rotation {
   0% {
-    bottom: 0px;
+    bottom: 0;
   }
   33% {
     bottom: 50px;
@@ -6275,7 +6275,7 @@ ul, ol {
     bottom: 100px;
   }
   100% {
-    bottom: 0px;
+    bottom: 0;
   }
 }
 @keyframes loading-spinner {
