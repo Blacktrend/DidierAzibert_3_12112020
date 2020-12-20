@@ -25,12 +25,6 @@
   text-transform: capitalize;
 }
 
-.meal:hover .meal__desc, .meal:hover .meal__title {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
 .bookmark .fas::before {
   background: linear-gradient(190deg, #9356dc 0%, #ff79da 95%);
   -webkit-background-clip: text;
@@ -6146,6 +6140,11 @@ body {
   max-width: 375px;
   margin: 0 auto;
 }
+@media only screen and (min-width: 376px) {
+  body {
+    max-width: 767px;
+  }
+}
 
 body, button {
   font-family: "Roboto", sans-serif;
@@ -6299,13 +6298,17 @@ ul, ol {
   z-index: -9;
   top: 0;
   left: 0;
-  font-family: "Roboto", sans-serif;
   width: 100%;
   height: 100%;
   background: rgba(53, 53, 53, 0.9);
   font-size: 2rem;
   flex-direction: column;
   padding-bottom: 25vh;
+}
+@media only screen and (max-width: 374px) {
+  .spinner {
+    font-size: 1.5rem;
+  }
 }
 .spinner p {
   display: block;
@@ -6481,11 +6484,25 @@ ul, ol {
   padding: 0 40px;
 }
 
+@media only screen and (min-width: 376px) {
+  .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .info__title {
   margin-bottom: 32px;
 }
 .info .steps {
   counter-reset: step;
+}
+@media only screen and (min-width: 376px) {
+  .info .steps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 .info .steps .step {
   counter-increment: step;
@@ -6496,6 +6513,18 @@ ul, ol {
   position: relative;
   z-index: 1;
   cursor: default;
+}
+@media only screen and (min-width: 376px) {
+  .info .steps .step {
+    margin: 12px;
+    padding-right: 48px;
+    width: 95%;
+  }
+}
+@media only screen and (max-width: 374px) {
+  .info .steps .step {
+    font-size: 0.95rem;
+  }
 }
 .info .steps .step::before {
   content: counter(step);
@@ -6557,6 +6586,11 @@ ul, ol {
   margin-bottom: 24px;
   position: relative;
 }
+@media only screen and (min-width: 376px) {
+  .card {
+    margin: 12px;
+  }
+}
 .card__img {
   object-fit: cover;
   height: 174px;
@@ -6581,6 +6615,14 @@ ul, ol {
 }
 .card__place {
   padding-bottom: 16px;
+}
+
+@media only screen and (min-width: 376px) {
+  .results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 .menu__img {
@@ -6622,15 +6664,14 @@ ul, ol {
   box-shadow: 0 3px 6px rgba(137, 137, 137, 0.2);
   margin-bottom: 16px;
   display: flex;
-  justify-content: space-between;
   overflow: hidden;
+  cursor: pointer;
 }
-.meal__container {
+.meal__text {
   padding: 16px 0;
-  overflow: hidden;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
+  min-width: 0;
+  /*see codepen chriscoyier/pen/zqedEr*/
+  flex-grow: 1;
 }
 .meal__title {
   font-size: 1.1em;
@@ -6641,19 +6682,21 @@ ul, ol {
   margin: 0;
   font-size: 0.9em;
 }
+.meal__title, .meal__desc {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .meal__price {
-  margin: 0;
   padding: 0 22px 0 10px;
   align-self: flex-end;
   font-weight: bold;
 }
 .meal__select {
+  width: 0;
   color: white;
   background-color: #99e2d0;
   border-radius: 0 20px 20px 0;
-  position: relative;
-  min-width: 0;
-  max-width: 0;
   overflow: hidden;
   font-size: 1.3em;
   transition: all 0.3s ease-in-out;
@@ -6661,12 +6704,8 @@ ul, ol {
 .meal__select i {
   transition: all 0.4s ease-in-out;
 }
-.meal:hover .meal__text {
-  overflow: hidden;
-}
 .meal:hover .meal__select {
-  min-width: 59px;
-  max-width: 59px;
+  width: 59px;
 }
 .meal:hover .meal__select i {
   transform: rotate(360deg);

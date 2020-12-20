@@ -27,7 +27,6 @@
   z-index: -9;
   top: 0;
   left: 0;
-  font-family: $font;
   width: 100%;
   height: 100%;
   background: rgba(map-get($colors, footer-bg), 0.9);
@@ -35,6 +34,9 @@
   @extend %center-flex;
   flex-direction: column;
   padding-bottom: 25vh;
+  @include low-mobile {
+    font-size: 1.5rem;
+  }
   p {
     display: block;
     margin: 0;

@@ -4,6 +4,9 @@
 body {
   max-width: map-get($breakpoints, mobile);
   margin: 0 auto;
+  @include large-mobile {
+    max-width: 767px;
+  }
 }
 body, button {
   font-family: $font;

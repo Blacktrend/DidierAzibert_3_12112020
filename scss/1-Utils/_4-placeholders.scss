@@ -24,12 +24,6 @@
   text-transform: capitalize;
 }
 
-%text-overflow {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
 %text-gradient {
   background: linear-gradient(190deg, map-get($colors, first) 0%, map-get($colors, second) 95%);
   -webkit-background-clip: text;

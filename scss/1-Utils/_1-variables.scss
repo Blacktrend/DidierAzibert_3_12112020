@@ -25,11 +25,12 @@ $sizes: (
 );
 
 $breakpoints: (
+        low-mobile: 374px,
         mobile: 375px,
-        tablet: 768px,
-        laptop: 992px,
-        desktop: 1200px,
-        desktop_M: 1440px
+        large-mobile: 376px,
+        landscape-tablet: 768px,
+        laptop: 1025px,
+        large-desktop: 1440px
 );
 
 $radius: (

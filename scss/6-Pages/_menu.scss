@@ -44,14 +44,12 @@
   box-shadow: map-get($shadows, soft);
   margin-bottom: map-get($sizes, m);
   display: flex;
-  justify-content: space-between;
   overflow: hidden;
-  &__container {
+  cursor: pointer;
+  &__text {
     padding: 16px 0;
-    overflow: hidden;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
+    min-width: 0; /*see codepen chriscoyier/pen/zqedEr*/
+    flex-grow: 1;
   }
   &__title {
     font-size: 1.1em;
@@ -69,19 +67,21 @@
       @extend %first-letter;
     }
   }
+  &__title, &__desc {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
   &__price {
-    margin: 0;
-    padding: 0 22px 0 10px;
+  padding: 0 22px 0 10px;
     align-self: flex-end;
     font-weight: bold;
   }
   &__select {
+    width: 0;
     color: white;
     background-color: map-get($colors, third);
     border-radius: 0 map-get($radius, steps) map-get($radius, steps) 0;
-    position: relative;
-    min-width: 0;
-    max-width: 0;
     overflow: hidden;
     @extend %center-flex;
     font-size: 1.3em;
@@ -90,19 +90,11 @@
       transition: all .4s ease-in-out;
     }
   }
-  &__title, &__desc {
-
-  }
   &:hover {
-    .meal__text {
-      overflow: hidden;
-    }
-    .meal__desc, .meal__title {
-      @extend %text-overflow;
+    .meal__select {
+      width: 59px;
     }
     .meal__select {
-      min-width: 59px;
-      max-width: 59px;
       i {
         transform: rotate(360deg);
       }

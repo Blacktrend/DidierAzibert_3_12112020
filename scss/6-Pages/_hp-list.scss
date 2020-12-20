@@ -12,6 +12,9 @@
   box-shadow: map-get($shadows, soft);
   margin-bottom: map-get($sizes, l);
   position: relative;
+  @include large-mobile {
+    margin: 12px;
+  }
   &__img {
     object-fit: cover;
     height: map-get($sizes, imgh);
@@ -39,5 +42,12 @@
   }
   &__place {
     padding-bottom: map-get($sizes, m);
+  }
+}
+.results {
+  @include large-mobile {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }

@@ -1,11 +1,22 @@
 .info {
   @extend %default-padding;
+  @include large-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   &__title {
     margin-bottom: map-get($sizes, xl);
     @extend %heading-weight;
   }
   .steps {
     counter-reset: step;
+    @include large-mobile {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
     .step {
       counter-increment: step;
       @extend %bg;
@@ -16,6 +27,14 @@
       position: relative;
       z-index: 1;
       cursor: default;
+      @include large-mobile {
+        margin: 12px;
+        padding-right: 48px;
+        width: 95%;
+      }
+      @include low-mobile {
+        font-size: 0.95rem;
+      }
       &::before {
         content: counter(step);
         display: inline-block;
@@ -35,11 +54,13 @@
         font-family: sans-serif;
         line-height: 1.2;
       }
+
       &__p {
         display: inline;
         font-weight: bold;
         font-size: 0.9em;
       }
+
       &__icon {
         margin: 0 map-get($sizes, l);
         width: 20px;
@@ -47,6 +68,7 @@
         color: map-get($colors, shadow);
         transition: color .2s ease-in-out;
       }
+
       &::after {
         content: "";
         position: absolute;
@@ -61,10 +83,12 @@
         opacity: 0;
         transition: opacity .2s ease-in-out;
       }
-      &:hover{
+
+      &:hover {
         &::after {
           opacity: 1;
         }
+
         .step__icon {
           color: map-get($colors, first);
         }
