@@ -6145,6 +6145,16 @@ body {
     max-width: 767px;
   }
 }
+@media only screen and (min-width: 768px) {
+  body {
+    max-width: 1024px;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  body {
+    max-width: 1440px;
+  }
+}
 
 body, button {
   font-family: "Roboto", sans-serif;
@@ -6249,6 +6259,12 @@ ul, ol {
 .bookmark--menu {
   right: 38px;
   top: 50px;
+}
+@media only screen and (max-width: 374px) {
+  .bookmark--menu {
+    right: 30px;
+    top: 40px;
+  }
 }
 .bookmark--menu .fa-heart {
   font-size: 1.5rem;
@@ -6429,6 +6445,16 @@ ul, ol {
   display: inline-block;
   width: 49%;
 }
+@media only screen and (min-width: 376px) {
+  .header__logolnk {
+    width: 35%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .header__logolnk {
+    width: 255px;
+  }
+}
 .header__logoimg {
   width: 100%;
 }
@@ -6445,6 +6471,16 @@ ul, ol {
 .footer__logo {
   width: 40%;
   margin-bottom: 24px;
+}
+@media only screen and (min-width: 376px) {
+  .footer__logo {
+    width: 26%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .footer__logo {
+    width: 190px;
+  }
 }
 .footer__link {
   color: white;
@@ -6518,7 +6554,7 @@ ul, ol {
   .info .steps .step {
     margin: 12px;
     padding-right: 48px;
-    width: 95%;
+    width: 330px;
   }
 }
 @media only screen and (max-width: 374px) {
@@ -6579,6 +6615,12 @@ ul, ol {
 .list {
   padding-bottom: 40px;
 }
+@media only screen and (min-width: 376px) {
+  .list__title {
+    text-align: center;
+  }
+}
+
 .card {
   background-color: white;
   border-radius: 10px;
@@ -6629,6 +6671,26 @@ ul, ol {
   width: 100%;
   height: 258px;
 }
+@media only screen and (min-width: 376px) {
+  .menu__img {
+    object-fit: cover;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .menu__img {
+    height: 388px;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .menu__img {
+    height: 505px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .menu__img {
+    border-radius: 45px;
+  }
+}
 .menu__container {
   border-radius: 45px 45px 0 0;
   padding: 20px 12px;
@@ -6636,10 +6698,22 @@ ul, ol {
   position: relative;
   z-index: 1;
 }
+@media only screen and (min-width: 376px) {
+  .menu__container {
+    width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 .menu__heading {
   padding-left: 8px;
   font-family: "Shrikhand", cursive;
   font-size: 1.7em;
+}
+@media only screen and (max-width: 374px) {
+  .menu__heading {
+    font-size: 1.3em;
+  }
 }
 .meals__heading {
   padding-left: 8px;
@@ -6678,6 +6752,11 @@ ul, ol {
   padding-bottom: 12px;
   margin: 0;
 }
+@media only screen and (max-width: 374px) {
+  .meal__title {
+    font-size: 0.9em;
+  }
+}
 .meal__desc {
   margin: 0;
   font-size: 0.9em;
@@ -6686,6 +6765,11 @@ ul, ol {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+@media only screen and (max-width: 374px) {
+  .meal__title, .meal__desc {
+    white-space: normal;
+  }
 }
 .meal__price {
   padding: 0 22px 0 10px;
@@ -6709,6 +6793,11 @@ ul, ol {
 }
 .meal:hover .meal__select i {
   transform: rotate(360deg);
+}
+@media only screen and (max-width: 374px) {
+  .meal:hover .meal__title, .meal:hover .meal__desc {
+    white-space: nowrap;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

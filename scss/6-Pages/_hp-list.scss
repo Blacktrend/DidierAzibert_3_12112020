@@ -4,6 +4,9 @@
   padding-bottom: map-get($sizes, xxl);
   &__title {
     @extend %heading-weight;
+    @include large-mobile {
+      text-align: center;
+    }
   }
 }
 .card {

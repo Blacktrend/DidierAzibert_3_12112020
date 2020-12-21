@@ -38,6 +38,10 @@
   &--menu {
     right: 38px;
     top: 50px;
+    @include low-mobile {
+      right: 30px;
+      top: 40px;
+    }
     .fa-heart {
       font-size: 1.5rem;
     }

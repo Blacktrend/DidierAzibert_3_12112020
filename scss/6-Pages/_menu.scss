@@ -2,6 +2,18 @@
   &__img {
     width: 100%;
     height: map-get($sizes, imgh2);
+    @include large-mobile {
+      object-fit: cover;
+    }
+    @include landscape-tablet {
+      height: 388px;
+    }
+    @include laptop {
+      height: 505px;
+    }
+    @include large-desktop {
+      border-radius: 45px;
+    }
   }
   &__container {
     @extend %bg;
@@ -10,11 +22,19 @@
     margin-top: -55px;
     position: relative;
     z-index: 1;
+    @include large-mobile {
+      width: 420px;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
   &__heading {
     padding-left: map-get($sizes, xs);
     font-family: 'Shrikhand', cursive;
     font-size: 1.7em;
+    @include low-mobile {
+      font-size: 1.3em;
+    }
     &::first-letter {
       @extend %first-letter;
     }
@@ -56,6 +76,9 @@
     @extend %heading-weight;
     padding-bottom: 12px;
     margin: 0;
+    @include low-mobile {
+      font-size: 0.9em;
+    }
     &::first-letter {
       @extend %first-letter;
     }
@@ -71,6 +94,9 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    @include low-mobile {
+      white-space: normal;
+    }
   }
   &__price {
   padding: 0 22px 0 10px;
@@ -97,6 +123,11 @@
     .meal__select {
       i {
         transform: rotate(360deg);
+      }
+    }
+    .meal__title, .meal__desc {
+      @include low-mobile {
+        white-space: nowrap;
       }
     }
   }

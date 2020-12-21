@@ -7,6 +7,12 @@ body {
   @include large-mobile {
     max-width: 767px;
   }
+  @include landscape-tablet {
+    max-width: 1024px;
+  }
+  @include laptop {
+    max-width: 1440px;
+  }
 }
 body, button {
   font-family: $font;

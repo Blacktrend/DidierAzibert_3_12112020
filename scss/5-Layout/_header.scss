@@ -5,6 +5,12 @@
   &__logolnk {
     display: inline-block;
     width: 49%;
+    @include large-mobile {
+      width: 35%;
+    }
+    @include landscape-tablet {
+      width: 255px;
+    }
   }
   &__logoimg {
     width: 100%;

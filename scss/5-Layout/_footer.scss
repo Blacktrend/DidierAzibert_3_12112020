@@ -3,6 +3,12 @@
   &__logo {
     width: 40%;
     margin-bottom: map-get($sizes, l);
+    @include large-mobile {
+      width: 26%;
+    }
+    @include landscape-tablet {
+      width: 190px;
+    }
   }
   &__link {
     color: map-get($colors, lnk);
