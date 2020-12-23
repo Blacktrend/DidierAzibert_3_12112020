@@ -16,6 +16,9 @@
 
 .bookmark {
   position: absolute;
+  .fa-heart {
+    cursor: pointer;
+  }
   .fas::before { /* use pseudo element with transition to avoid it at page load */
     content: "\f004";
     position: absolute;
