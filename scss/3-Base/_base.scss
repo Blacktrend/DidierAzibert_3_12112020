@@ -23,6 +23,9 @@ button {
     outline: none;
   }
 }
+input {
+  outline: none;
+}
 footer {
   @extend %default-padding;
 }

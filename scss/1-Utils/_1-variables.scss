@@ -20,6 +20,7 @@ $sizes: (
         l: 24px,
         xl: 32px,
         xxl: 40px,
+        imgw: 335px,
         imgh: 174px,
         imgh2: 258px
 );
@@ -28,6 +29,7 @@ $breakpoints: (
         low-mobile: 374px,
         mobile: 375px,
         large-mobile: 376px,
+        tablet: 600px,
         landscape-tablet: 768px,
         laptop: 1025px,
         large-desktop: 1440px
